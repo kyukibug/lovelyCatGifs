@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+h1 {
+  display: none;
+}
+
+#navbar {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url("../images/nyancatbanner.jpg");
+  background-position: 5px;
+  border-bottom: 3px solid white;
+}
+
+#navbar a {
+  color: black;
+  font-size: 25px;
+  padding-right: 35px;
+}
+
+#navbar div a {
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+#nav1:hover {
+  color: #e63946;
+  font-weight: bold;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#nav2:hover {
+  color: #06d6a0;
+  font-weight: bold;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#nav3:hover {
+  color: #5465ff;
+  font-weight: bold;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.carousel-item img {
+  height: calc(100vh - 56px);
+  object-fit: cover;
+}
+
+.carousel-container {
+  position: relative;
+  background-image: url("../images/resturant-cat.png");
+}
+
+.carousel-button-container {
+  display: grid;
+  grid-gap: 20%;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-button {
+  position: relative;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 6vw;
+  text-align: center;
+  color: #fff;
+  border: 3px solid #ffff;
+  border-radius: 15px;
+  padding: 10px;
+  white-space: nowrap;
+  background-clip: padding-box;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background-image: url("../images/black-star-background.jpg");
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.carousel-button:hover {
+  color: #f5ebe0;
+  background-color: #000000;
+  cursor: pointer;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-button-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .carousel-button {
+    font-size: 2.5vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel {
+    display: none;
+  }
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 56px);
+  }
+  .carousel-caption {
+    position: static;
+  }
+}

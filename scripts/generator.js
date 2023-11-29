@@ -20,6 +20,7 @@ function generateRandomGif() {
     "teapot-cat",
     "thumbsup-cat",
     "tonguestuck-cat",
+    "towel-cat",
     "wat-cat",
     "wooyay-cat",
   ];

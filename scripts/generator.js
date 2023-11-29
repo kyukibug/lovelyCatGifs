@@ -23,8 +23,19 @@ function generateRandomGif() {
     "wat-cat",
     "wooyay-cat",
   ];
-  var randIndex = Math.floor(Math.random() * 22);
+  var randIndex = Math.floor(Math.random() * gifNames.length);
   var randGif = document.getElementById("randomGif");
   randGif.src = "images/gifs/" + gifNames[randIndex] + ".gif";
-  randGift.alt = gifNames[randIndex];
+  randGif.alt = gifNames[randIndex];
+  var responses = [
+    "WOW!!",
+    ":00000",
+    "WOAH!!",
+    "SICK CAT!?",
+    "You got pretty lucky",
+    "Nice cat!!!",
+    "very nice",
+  ];
+  document.getElementById("randomGifCaption").innerHTML =
+    responses[Math.floor(Math.random() * responses.length)];
 }
